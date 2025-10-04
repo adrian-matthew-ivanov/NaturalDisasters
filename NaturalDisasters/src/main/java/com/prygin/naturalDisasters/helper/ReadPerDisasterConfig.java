@@ -1,11 +1,9 @@
-package com.prygin.naturalDisasters;
+package com.prygin.naturalDisasters.helper;
 
+import com.prygin.naturalDisasters.NaturalDisasters;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
-import java.util.Map;
 
 public class ReadPerDisasterConfig {
     private static final FileConfiguration config = NaturalDisasters.getPlugin(NaturalDisasters.class).getConfig();

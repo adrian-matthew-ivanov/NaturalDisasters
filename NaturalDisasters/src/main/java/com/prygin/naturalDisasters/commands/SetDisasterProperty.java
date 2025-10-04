@@ -1,13 +1,13 @@
-package com.prygin.naturalDisasters;
+package com.prygin.naturalDisasters.commands;
 
+import com.prygin.naturalDisasters.events.NaturalDisaster;
+import com.prygin.naturalDisasters.NaturalDisasters;
+import com.prygin.naturalDisasters.helper.ReadPerDisasterConfig;
 import io.papermc.paper.command.brigadier.BasicCommand;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Type;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;

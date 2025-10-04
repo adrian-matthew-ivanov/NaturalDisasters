@@ -1,6 +1,11 @@
 package com.prygin.naturalDisasters;
 
-import com.prygin.naturalDisasters.MeteorShower.MeteorShower;
+import com.prygin.naturalDisasters.events.AcidRain;
+import com.prygin.naturalDisasters.events.MeteorShower.MeteorShower;
+import com.prygin.naturalDisasters.commands.GetDisasterLength;
+import com.prygin.naturalDisasters.commands.SetDisasterLength;
+import com.prygin.naturalDisasters.commands.SetDisasterProperty;
+import com.prygin.naturalDisasters.commands.StartNaturalEvent;
 import io.papermc.paper.command.brigadier.BasicCommand;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import org.bukkit.Bukkit;
