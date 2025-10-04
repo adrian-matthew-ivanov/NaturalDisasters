@@ -15,6 +15,9 @@ public class NaturalDisaster {
 
     public void start() {
         initialize();
+
+        NaturalDisasters.current_events.add(this);
+
         this.executeTask = Bukkit.getScheduler().runTaskTimer(NaturalDisasters.getPlugin(NaturalDisasters.class), this::loop,
                 0L, 1L);
         timer = 0;
@@ -39,6 +42,7 @@ public class NaturalDisaster {
     public void stopExecute() {
         this.executeTask.cancel();
         this.end();
+        NaturalDisasters.current_events.remove(this);
     }
 
     public void end() {

@@ -1,11 +1,9 @@
 package com.prygin.naturalDisasters;
 
+import com.prygin.naturalDisasters.commands.*;
 import com.prygin.naturalDisasters.events.AcidRain;
 import com.prygin.naturalDisasters.events.MeteorShower.MeteorShower;
-import com.prygin.naturalDisasters.commands.GetDisasterLength;
-import com.prygin.naturalDisasters.commands.SetDisasterLength;
-import com.prygin.naturalDisasters.commands.SetDisasterProperty;
-import com.prygin.naturalDisasters.commands.StartNaturalEvent;
+import com.prygin.naturalDisasters.events.NaturalDisaster;
 import io.papermc.paper.command.brigadier.BasicCommand;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import org.bukkit.Bukkit;
@@ -15,6 +13,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -27,6 +26,8 @@ public final class NaturalDisasters extends JavaPlugin {
     public static Map<String, Function<CommandSourceStack, Boolean>> valid_events = new HashMap<>();
 
     public static Map<String, Class<?>> events = new HashMap<>();
+
+    public static List<NaturalDisaster> current_events = List.of();
 
     @Override
     public void onEnable() {
@@ -57,6 +58,8 @@ public final class NaturalDisasters extends JavaPlugin {
         registerCommand("geteventduration", new GetDisasterLength());
 
         registerCommand("seteventproperty", new SetDisasterProperty());
+
+        registerCommand("stopallevents", new StopAllEvents());
 
         Bukkit.getServer().getLogger().info("Natural Disasters Plugin Loaded");
     }
