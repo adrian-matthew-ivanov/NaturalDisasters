@@ -1,1 +1,4 @@
 eventduration: 1200
+acid-rain:
+  damage-gap: 20
+meteor-shower:

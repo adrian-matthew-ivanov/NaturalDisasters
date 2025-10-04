@@ -3,9 +3,14 @@ package com.prygin.naturalDisasters;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitTask;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NaturalDisaster {
     private BukkitTask executeTask;
     private int timer;
+
+    public Map<String, Object> properties = new HashMap<>();
 
     public void start() {
         initialize();

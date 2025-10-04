@@ -14,10 +14,13 @@ public class AcidRain extends NaturalDisaster{
 
     private int damageTimer;
 
+    public static final String name = "acid-rain";
+
     public AcidRain(Player player) {
         this.world = player.getWorld();
         this.player = player;
         this.damageTimer = 0;
+        this.properties.put("damage-gap", Integer.parseInt((String) ReadPerDisasterConfig.get_property("damage-gap", name)));
     }
 
     @Override
@@ -32,7 +35,7 @@ public class AcidRain extends NaturalDisaster{
     public void execute() {
         this.damageTimer++;
 
-        if (this.damageTimer > 100) {
+        if (this.damageTimer > (int) properties.get("damage-gap")) {
             this.damageTimer = 0;
             for (int i = 0; i < 320-this.player.getY(); i++) {
                 if (this.world.getBlockAt(new Location(this.world, this.player.getX(),
