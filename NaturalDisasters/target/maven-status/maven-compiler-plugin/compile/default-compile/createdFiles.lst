@@ -1,0 +1,8 @@
+com\prygin\naturalDisasters\SetDisasterLength.class
+com\prygin\naturalDisasters\NaturalDisasters.class
+com\prygin\naturalDisasters\GetDisasterLength.class
+com\prygin\naturalDisasters\StartNaturalEvent.class
+com\prygin\naturalDisasters\AcidRain.class
+com\prygin\naturalDisasters\MeteorShower\MeteorShower.class
+com\prygin\naturalDisasters\NaturalDisaster.class
+com\prygin\naturalDisasters\MeteorShower\Meteor.class

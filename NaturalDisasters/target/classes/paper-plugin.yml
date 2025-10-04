@@ -1,0 +1,6 @@
+name: NaturalDisasters
+version: '1.0'
+main: com.prygin.naturalDisasters.NaturalDisasters
+api-version: '1.21'
+authors: [ Prygin ]
+description: Allows the player to start natural events and disasters
